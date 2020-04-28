@@ -10,9 +10,11 @@
        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <context:component-scan base-package="com.ming.hospital.web"/>
+    <!-- Spring 来扫描指定包下的类，并注册被@Component，@Controller，@Service，@Repository等注解标记的组件 -->
     <mvc:annotation-driven/>
     <mvc:default-servlet-handler/>
 
+    <!-- 配置SpringMVC的视图解析器-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="internalResourceViewResolver">
         <property name="prefix" value="/" />
         <property name="suffix" value=".jsp"/>

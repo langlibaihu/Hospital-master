@@ -33,7 +33,7 @@ public class UserController {
         user.setCreatetime(date);
         user.setUpdatetime(date);
         user.setUid(CommonUtils.getId());
-        user.setCode(UUID.randomUUID().toString().replace("-", ""));//激活码
+        user.setCode(UUID.randomUUID().toString().replace("-", ""));//激活码 (通用唯一识别码)
         boolean register = userService.register(user);
         if (register) {
             return "registerSuccess";
