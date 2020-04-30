@@ -45,12 +45,12 @@ public class MailUtil extends Thread  {
             Session session = Session.getDefaultInstance(props, new Authenticator() {
                 @Override
                 protected PasswordAuthentication getPasswordAuthentication() {
-                    return new PasswordAuthentication("969130721@qq.com","pkqowyqqhnaxbgae");
+                    return new PasswordAuthentication("2754475247@qq.com","qrxpegjtjvexdgcj");
                 }
             });
             session.setDebug(true);
             Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("969130721@qq.com"));
+            message.setFrom(new InternetAddress("2754475247@qq.com"));
             message.setRecipient(Message.RecipientType.TO,new InternetAddress(user.getEmail()));
             message.setSubject("医者天下注册激活邮件");
             String html = "<h2>亲爱的"+user.getName()+"用户你好：</h2><br/>";
