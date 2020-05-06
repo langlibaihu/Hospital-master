@@ -54,9 +54,9 @@ public class MailUtil extends Thread  {
             message.setRecipient(Message.RecipientType.TO,new InternetAddress(user.getEmail()));
             message.setSubject("医者天下注册激活邮件");
             String html = "<h2>亲爱的"+user.getName()+"用户你好：</h2><br/>";
-            html += "&nbsp&nbsp恭喜你的账号："+user.getUser()+" 注册成功！请48小时内，点击此链接激活" +
+            html += "恭喜你的账号："+user.getUser()+" 注册成功！请48小时内，点击此链接激活" +
                     "<a href = 'http://"+link+"/Hospital/user/active/"+user.getCode()+"'>"
-                    +user.getCode()+"</a>";
+                    +user.getCode()+"</a>"+"<br>不会真有好兄弟点这个没用的链接吧，不会吧不会吧<br>from                     星亮";
             message.setContent(html,"text/html;charset=utf-8");
             Transport.send(message);
         } catch (Exception e) {
